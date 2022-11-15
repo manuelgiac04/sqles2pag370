@@ -1,0 +1,71 @@
+CREATE TABLE attore (
+    nome VARCHAR (30) NOT NULL,
+    cognome VARCHAR (30),
+    codice INT (2)PRIMARY KEY,
+    nazionalità VARCHAR (25),
+    eta INT (2), 
+    };  
+  INSERT INTO ATTORE(codice,nome,cognome,nazionalità,età)
+  VALUES('1',' simone',' inzaghi','italiano','54')
+  
+  INSERT INTO ATTORE(codice,nome,cognome,nazionalità,età)
+  VALUES('2',' francesco',' icardi','san marinese','30')
+  
+  INSERT INTO ATTORE(codice,nome,cognome,nazionalità,età)
+  VALUES('3',' domenico',' ferraro',' francese','22')
+  
+  INSERT INTO ATTORE(codice,nome,cognome,nazionalità,età)
+  VALUES('4',' asdrubale',' camoranesi',' tedesco','67')
+  ;
+ 
+  
+  CREATE TABLE film (
+    titolo VARCHAR (30)NOT NULL,
+    codice INT (3)PRIMARY KEY,,
+    durata INT (6) NOT NULL,
+    lingua VARCHAR (25),
+    anno INT (4), 
+    };
+  INSERT INTO FILM(titolo,anno,durata,codice,lingua)
+  VALUES('il giro dei boschi',' 2016',' 86', '2',' italiano')
+    
+   INSERT INTO FILM(titolo,anno,durata,codice,lingua)
+   VALUES('avengers', '1987', '218', '1', 'inglese') 
+    
+   INSERT INTO FILM(titolo,anno,durata,codice,lingua)
+   VALUES('la 5 E',' 2022',' 145',' 3',' italiano') 
+    
+    INSERT INTO FILM(titolo,anno,durata,codice,lingua)
+   VALUES('la vita degli altri', '2006','217', '4', 'tedesco') ;
+        
+
+  CREATE TABLE produttore (
+    nazionalità VARCHAR (30),
+    fondazione INT (4),
+    indirizzo INT (30) NOT NULL,
+    nome VARCHAR (25)PRIMARY KEY,
+  };
+    
+  INSERT INTO PRODUTTORE(nazionalità,fondazione,indirizzo,nome)
+  VALUES( 'tedesca',' 1999', 'amburgo',' hanser')
+    
+    INSERT INTO PRODUTTORE(nazionalità,fondazione,indirizzo,nome)
+  VALUES( 'italiano', '1989',' rimini', 'Editori Riuniti')
+    
+    INSERT INTO PRODUTTORE(nazionalità,fondazione,indirizzo,nome)
+  VALUES( 'francese',' 2016',' monaco',' Hoepli')
+    
+    INSERT INTO PRODUTTORE(nazionalità,fondazione,indirizzo,nome)
+  VALUES(' italiano', '2004', 'firenze', 'Cairo Editore' );
+    
+    
+      SELECT nome, cognome FROM ATTORE
+       WHERE nazionalità ="italiano"
+    
+      SELECT titolo, titolo FROM FILM
+       WHERE anno < 2000;
+    
+      SELECT titolo, anno FROM FILM
+       WHERE durata >= 90;
+      
+      SELECT nazionalità FROM ATTORI;
